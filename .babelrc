@@ -1,0 +1,12 @@
+{
+  "presets": [  // preset is a group of plugins, react is a preset which is group of these 3 plugins: 
+    "react", // converts jsx to js, also handles the flow
+    ["env", {
+      "targets": {
+        "browsers": "last 2 versions" // do the conversion keeping only latest two versions of browsers in mind
+      },
+      "loose": true,   // true => don't take care of edge cases. keeps the code small but there is a risk of breaking code on edge cases
+      "modules": false // hey babel, don't touch the modules, webpack will take care of it
+    }]
+  ]
+}

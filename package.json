@@ -1,6 +1,10 @@
 {
   "scripts": {
-    "api": "node ratingsAPI.js"
+    "api": "node ratingsAPI.js",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "lint": "eslint **/*.{js,jsx} --quiet"
+
   },
   "dependencies": {
     "axios": "0.16.1",
@@ -41,7 +45,7 @@
     "eslint-config-airbnb": "15.0.1",
     "eslint-config-prettier": "2.1.1",
     "eslint-config-react": "1.1.7",
-    "eslint-loader": "1.7.1",
+    "eslint-loader": "^1.9.0",
     "eslint-plugin-flow": "2.29.1",
     "eslint-plugin-flowtype": "2.33.0",
     "eslint-plugin-import": "2.3.0",

@@ -1,0 +1,30 @@
+// On top of Prettier which takes of all the formatting, you may want to enforce some code 
+// styles which pertain more to usage: for example you may want to force people never use with 
+// which is valid JS but illadvised to use. ESLint comes into play here. It will lint for this 
+// problems. There are dozens of present configs for ESLint and you're welcome to use any one of them. 
+// The Airbnb config is very popular, as is the standard config (which I teach in previous versions 
+// of this class.) We're going to use the Airbnb one since it's likely the most popular one. Let's 
+// create an .eslintrc.json file to start linting our project.
+
+{
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  }
+}
